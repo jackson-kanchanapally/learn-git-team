@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2 id="mintu"> </h2>
+    <script>
+        console.log("hii")
+        var r
+        var c=document.getElementById('mintu')
+        async function honey()  {
+            
+var a=  await fetch('http://jsonplaceholder.typicode.com/posts')
+var b= await a.json()
+return b
+
+        }
+
+      async function fruity(){
+      r  =await honey()
+       r.map((ss)=>(
+           c.innerHTML+=ss.body
+       ))}
+fruity()
+        
+       console.log(b)
+       console.log("bye")
+        </script>
+</body>
+</html>

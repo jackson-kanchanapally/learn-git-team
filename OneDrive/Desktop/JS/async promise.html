@@ -1,0 +1,23 @@
+<html>
+<head><title>promise</title>
+</head>
+<body>
+    <script>
+        console.log("its just a trail ok na jacks??")
+       const a=["h","o","n","e","y","m"]
+       const b=new Promise((resolve,reject)=>{
+        if(a.includes('h')&&a.includes('o')&&a.includes('n')&&a.includes('e')&&a.includes('y'))
+        resolve ("print honey");
+        else
+        reject("incorrect spelling")
+       })
+       b.then(()=>{
+        console.log("honey is my name")
+       })
+       b.catch((err)=>{
+        console.log("asdfg",err)
+       })
+       console.log("ok shanks")
+        </script>
+</body>
+</html>

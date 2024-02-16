@@ -1,0 +1,66 @@
+<html>
+    <head><title>api fetch</title>
+    </head>
+    <body>
+        <h1 id="honey"></h1>
+        <input type="button" onClick ="fun()"value="id"</input>
+        <input type="button" onClick ="run()"value="body"</input>
+        <input type="button" onClick ="sun()"value="title"</input>
+        <script>
+            console.log("start")
+            function fun(){
+            var a='http://jsonplaceholder.typicode.com/posts'
+            var d=document.getElementById('honey');
+            fetch(a).then((b)=>{
+                return b.json()
+            })
+            .then((honey)=>{
+             honey.map((h)=> ( 
+                d.innerHTML+=h.id
+                
+             ))
+             
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+        }
+        function run(){
+            var a='http://jsonplaceholder.typicode.com/posts'
+            var d=document.getElementById('honey');
+            fetch(a).then((b)=>{
+                return b.json()
+            })
+            .then((honey)=>{
+             honey.map((h)=> ( 
+                d.innerHTML+=h.body
+                
+             ))
+             
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+        }
+        function sun(){
+            var a='http://jsonplaceholder.typicode.com/posts'
+            var d=document.getElementById('honey');
+            fetch(a).then((b)=>{
+                return b.json()
+            })
+            .then((honey)=>{
+             honey.map((h)=> ( 
+                d.innerHTML+=h.title
+                
+             ))
+             
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+        }
+           console.log("end")
+            </script>
+            </body>
+            </html>
+        
